@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DistanceDisplayActivity">
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/text"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/display"
+        android:layout_marginTop="30dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        android:layout_gravity="center"
+        android:text="@string/start"
+        android:layout_marginTop="15dp"
+        android:onClick="startm"
+        android:textSize="40sp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stop"
+        android:layout_gravity="center"
+        android:text="@string/stop"
+        android:layout_marginTop="15dp"
+        android:onClick="stopm"
+        android:textSize="40sp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/restart"
+        android:layout_gravity="center"
+        android:text="@string/restart"
+        android:layout_marginTop="15dp"
+        android:onClick="restartm"
+        android:textSize="40sp"/>
+
+</LinearLayout>

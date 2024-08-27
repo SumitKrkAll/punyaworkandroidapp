@@ -1,24 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ajpg5"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
+        android:roundIcon="@mipmap/ajpg5"
         android:theme="@style/Theme.Punyawork"
+        android:supportsRtl="true"
         tools:targetApi="31">
+        <activity android:name=".FinalBusOrderDetailActivity" />
+        <activity android:name=".BusActivity" />
+        <activity
+            android:name=".MixOrderActivity"
+            android:parentActivityName=".Create_Order" />
+        <activity
+            android:name=".FinalOrderDetailActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PaymentModeActivity"
+            android:parentActivityName=".WaterOrderActivity" />
+        <activity
+            android:name=".WaterOrderActivity"
+            android:parentActivityName=".Create_Order" />
+        <activity
+            android:name=".OrderActivityBus"
+            android:parentActivityName=".Create_Order" />
+        <activity
+            android:name=".OrderActivity"
+            android:parentActivityName=".Create_Order" />
+        <activity
+            android:name=".WaterDetailActivity"
+            android:label="@string/water"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MedicineDetailActivity"
+            android:label="@string/medicine"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PastaDetailActivity"
+            android:label="@string/sbottle"
+            android:parentActivityName=".MainActivity" />
+
+        <service
+            android:name=".OdometerService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".DistanceDisplayActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <service
+            android:name=".DelayedMessageService"
+            android:exported="false" />
+
+        <activity
+            android:name=".FeedbackActivity"
+            android:label="@string/feedback1"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HelpActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PizzaDetailActivity"
+            android:label="@string/pbottle"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Create_Order"
+            android:label="@string/title"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Punyawork">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
