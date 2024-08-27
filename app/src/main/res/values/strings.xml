@@ -43,4 +43,149 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="title">Create Order</string>
+    <string name="share">Share</string>
+    <string name="top">Top Fragment</string>
+    <string-array name="pizzas">
+        <item>Medium</item>
+        <item>Small</item>
+        <item>Large</item>
+        <item>Corn</item>
+        <item>Cheeese</item>
+        <item>Double Orgeno</item>
+    </string-array>
+    <string-array name="pastas">
+        <item>Medium</item>
+        <item>Small</item>
+        <item>Large</item>
+        <item>Corn</item>
+        <item>Cheeese</item>
+        <item>Double Orgeno</item>
+    </string-array>
+    <string-array name="stores">
+        <item>Oil</item>
+        <item>Rice</item>
+        <item>Sugar</item>
+        <item>Corn</item>
+        <item>Biscuits</item>
+        <item>Vegitables</item>
+    </string-array>
+    <string name="home_tab">HOME</string>
+    <string name="plasticbottles_tab">BOTTLE</string>
+    <string name="steelbottles_tab">STEEL</string>
+    <string name="medicine_tab">HERB</string>
+    <string name="water_tab">WATER</string>
+    <string name="companyname">S AND C PRIVATE LIMITED</string>
+    <string name="intro">It will provide purified and cold water to all the
+        rail and train passengers on their respective seats in the their own bottles at
+        the most economical price which is three rs per litre. This startup is eco=friendly and
+        it will leads us towards sustainable development. This shows a map towards sustainable
+        development.
+
+    </string>
+    <string name="enter">Enter your good name</string>
+    <string name="enterorder">Enter your order</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello">Inbox</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello1">Drafts</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello2">SentItemFragments</string>
+    <string name="hell">Hello</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text2">Feedback</string>
+    <string name="username">punyawork1@gmail.com</string>
+    <string name="nav_inbox">Message</string>
+    <string name="nav_drafts">Drafz</string>
+    <string name="nav_sent">Sent Message</string>
+    <string name="nav_trash">Delete Message</string>
+    <string name="nav_support">Support</string>
+    <string name="nav_help">Help</string>
+    <string name="nav_feedback">Give Us Feedback</string>
+    <string name="nav_open_drawer">Open Navigation Drawer</string>
+    <string name="nav_close_drawer">Close Navigation Drawer</string>
+    <string name="message_hint">Type Message</string>
+    <string name="sendmessage_button">SEND MESSAGE</string>
+    <string name="chooser">Send Message Via...</string>
+    <string name="question">Your order is placed successfully.</string>
+    <string name="answer">You will receive it in three Minutes.</string>
+    <string name="channel_name">abc</string>
+    <string name="distance">Measure Distance</string>
+    <string name="question1">Location permission is required</string>
+    <string name="answer1">Timing</string>
+    <string name="channel_name1">abc</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="restart">RESTART</string>
+    <string name="text">Start to measure, distance travelled by you if you go on a walk</string>
+    <string name="capacity">Capacity:</string>
+    <string name="litre">1 Litre</string>
+    <string name="weight">Weight:</string>
+    <string name="kg">250 Grams</string>
+    <string name="price">Price:</string>
+    <string name="rupees">90 Rupees</string>
+    <string name="order">ORDER</string>
+    <string name="train">Train Passenger</string>
+    <string name="bus">Bus Passenger</string>
+    <string name="traind">Train No.:</string>
+    <string name="coach">Coach No.:</string>
+    <string name="trainn">Enter Train Number</string>
+    <string name="coachn">Enter Coach Number</string>
+    <string name="seat">Seat No.:</string>
+    <string name="seatn">Enter Seat Number</string>
+    <string name="or">OR</string>
+    <string name="pnr">PNR No.:</string>
+    <string name="pnrn">Enter PNR Number</string>
+    <string name="submit">Continue</string>
+    <string name="quantity">Quantity (L):</string>
+    <string name="nquan">Enter Quantity</string>
+    <string name="rate">Rate:</string>
+    <string name="ratec">Rs 3/Litre</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="one">1</string>
+    <string name="total">Total Price:</string>
+    <string name="three">Rs 3</string>
+    <string name="paymentmode">Select Payment Mode</string>
+    <string name="paytm">Paytm</string>
+    <string name="google">Google Pay</string>
+    <string name="phone">Phone Pay</string>
+    <string name="bhim">Bhim</string>
+    <string name="cash">Cash</string>
+    <string name="orderid">Order Id:</string>
+    <string name="mode">Mode of Payment:</string>
+    <string name="status">Status:</string>
+    <string name="home">HOME</string>
+    <string name="success">Success</string>
+    <string name="category">Category:</string>
+    <string name="brand">Brand:</string>
+    <string name="steelbot">Steel Bottle</string>
+    <string name="plasticbot">Plastic Bottle</string>
+    <string name="noofbottle">No. of Bottles</string>
+    <string name="busno">Bus No.:</string>
+    <string name="bustop">Bus Stop No.:</string>
+    <string name="busd">Enter Bus Number</string>
+    <string name="busstopd">Enter Bus Stop Number</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="ename">Enter Name...</string>
+    <string name="eemail">Enter Email...</string>
+    <string name="subject">Subject:</string>
+    <string name="esubject">Enter Subject...</string>
+    <string name="feedback">Feedback:</string>
+    <string name="feedback1">Feedback</string>
+    <string name="effedback">How can we improve?</string>
+    <string name="send">Send Feedback</string>
+    <string name="medicine">Medicine</string>
+    <string name="water">Water</string>
+    <string name="pbottle">Plastic Bottle</string>
+    <string name="sbottle">Steel Bottle</string>
+    <string name="web">Our Website</string>
+    <string name="title_activity_map">Map</string>
 </resources>
