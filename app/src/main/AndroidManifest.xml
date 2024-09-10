@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" package="com.example.punyawork">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -9,6 +9,23 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -19,6 +36,108 @@
         android:theme="@style/Theme.Punyawork"
         android:supportsRtl="true"
         tools:targetApi="31">
+        <activity android:name=".PrivacyActivity"/>
+        <activity
+            android:name=".MyLoginActivity"
+            android:label="@string/login"
+            android:parentActivityName=".SelectLoginAndSignupActivity" />
+        <activity
+            android:name=".MySignupActivity"
+            android:label="@string/signup"
+            android:parentActivityName=".SelectLoginAndSignupActivity" />
+        <activity android:name=".SelectLoginAndSignupActivity" />
+        <activity
+            android:name=".SendTextMessage"
+            android:label="@string/sendtextmess"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".MyOrderHistoryDetail"
+            android:label="@string/histdet"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".Order_History"
+            android:label="@string/Orderhis"
+            android:parentActivityName=".MainActivity2" />
+
+        <service
+            android:name=".SignupService"
+            android:exported="false" />
+
+        <activity android:name=".LoginActivity" />
+
+        <service
+            android:name=".Bed1MessageService"
+            android:exported="false" />
+
+        <activity
+            android:name=".EditDetailActivity"
+            android:label="@string/editdetails"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".WelcomeScreen"
+            android:theme="@style/Theme.Punyawork" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mycircleimage" />
+        <activity android:name=".FinalPlatformDetailActivity" />
+        <activity android:name=".OrderPlatformActivity" />
+        <activity
+            android:name=".BedDetailActivity"
+            android:label="@string/bedservice"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".BedServiceActivity"
+            android:label="@string/bedservice"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".MedicineServiceActivity"
+            android:label="@string/medicineservice"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".PastaServiceActivity"
+            android:label="@string/steelbottleservice"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".PizzaServiceActivity"
+            android:label="@string/plasticbottleservice"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".WaterServiceActivity"
+            android:label="@string/waterservice"
+            android:parentActivityName=".MainActivity2" />
+        <activity android:name=".MainActivity2" />
+        <activity
+            android:name=".StopWatechActivity"
+            android:label="@string/stopwatch"
+            android:parentActivityName=".MainActivity2" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".YourLocation1Activity"
+            android:label="@string/title_activity_your_location1"
+            android:parentActivityName=".MainActivity2" />
+
+        <service
+            android:name=".OrderTraceService"
+            android:exported="false" />
+
+        <activity
+            android:name=".MapActivity"
+            android:label="@string/title_activity_map"
+            android:parentActivityName=".MainActivity2" />
         <activity android:name=".FinalBusOrderDetailActivity" />
         <activity android:name=".BusActivity" />
         <activity
@@ -26,7 +145,7 @@
             android:parentActivityName=".Create_Order" />
         <activity
             android:name=".FinalOrderDetailActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".PaymentModeActivity"
             android:parentActivityName=".WaterOrderActivity" />
@@ -42,15 +161,15 @@
         <activity
             android:name=".WaterDetailActivity"
             android:label="@string/water"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".MedicineDetailActivity"
             android:label="@string/medicine"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".PastaDetailActivity"
             android:label="@string/sbottle"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity2" />
 
         <service
             android:name=".OdometerService"
@@ -59,7 +178,7 @@
 
         <activity
             android:name=".DistanceDisplayActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity2" />
 
         <service
             android:name=".DelayedMessageService"
@@ -68,28 +187,36 @@
         <activity
             android:name=".FeedbackActivity"
             android:label="@string/feedback1"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".HelpActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".PizzaDetailActivity"
             android:label="@string/pbottle"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".Create_Order"
             android:label="@string/title"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Punyawork">
+            android:label="@string/service"
+            android:parentActivityName=".MainActivity2" />
+
+        <service android:name=".MyFirebaseInstanceIdService" android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </activity>
+        </service>
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

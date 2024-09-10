@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "55090284851",
+    "project_id": "punyaworkandroidapp",
+    "storage_bucket": "punyaworkandroidapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55090284851:android:a894c18bcb7c75dba99646",
+        "android_client_info": {
+          "package_name": "com.example.punyawork"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzn_7QfAtGytkEpAyCgoUMkCg-oL5G91A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

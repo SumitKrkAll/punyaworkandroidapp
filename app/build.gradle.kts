@@ -1,5 +1,7 @@
 plugins {
-    alias(libs.plugins.android.application)
+
+    id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -68,6 +70,45 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0") // for FloatingActionButton and Material components
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
     implementation("androidx.core:core:1.12.0")
+    implementation("com.google.android.gms:play-services-tasks:18.0.2")
+    implementation("com.google.firebase:firebase-messaging:24.0.0")
+    implementation("com.google.firebase:firebase-auth:23.0.0")
+    implementation("com.google.firebase:firebase-database:21.0.0")
+    implementation("com.google.firebase:firebase-inappmessaging-display:21.0.0")
+    implementation("com.google.firebase:firebase-analytics:22.0.2")
+    implementation("com.google.firebase:firebase-core:21.1.1")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+    implementation("com.google.android.gms:play-services-maps:19.0.0")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("com.google.android.gms:play-services-tasks:18.2.0")
 
+    // Firebase Libraries
+    implementation("com.google.firebase:firebase-auth:23.0.0")
+    implementation("com.google.firebase:firebase-database:21.0.0")
+    implementation("com.google.firebase:firebase-messaging:24.0.0")
+    implementation("com.google.firebase:firebase-inappmessaging-display:21.0.0")
+    implementation("com.google.firebase:firebase-analytics:22.0.2")
+    implementation("com.google.firebase:firebase-core:21.1.1")
+
+    // Google Play Services Location and Maps
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+    implementation("com.google.android.gms:play-services-maps:19.0.0")
+
+    // Material Components
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("com.viewpagerindicator:library:2.4.1")
+    implementation("fr.avianey.com.viewpagerindicator:library:2.4.1.1@aar")
+
+    // Add CircularImageView library
+    implementation("com.mikhaellopez:circularimageview:4.3.1")
+    implementation("com.android.support:multidex:1.0.3")
+
+    // Volley library
+    implementation("androidx.viewpager:viewpager:1.0.0")
+    implementation("com.viewpagerindicator:library:2.4.1")
+    implementation("com.android.volley:volley:1.2.1")
+    implementation("com.google.firebase:firebase-auth:23.0.0")
+    implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
 }

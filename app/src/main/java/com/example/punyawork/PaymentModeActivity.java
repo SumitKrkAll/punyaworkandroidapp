@@ -20,6 +20,7 @@ public class PaymentModeActivity extends AppCompatActivity {
     public static final String TPRICE="totalprice";
     public static final String TRAIN="TRAINWATER";
     public static final String BUS="BUSWATER";
+    public static final String PLATFORM="PLATFORMWATER";
     public static final String TRAIN_PAY="TRAINMIX";
     public static final String BUS_PAY="BUSMIX";
     public int BUSWATER;

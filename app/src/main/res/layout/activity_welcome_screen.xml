@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WelcomeScreen">
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="131dp"
+        android:layout_height="131dp"
+        app:civ_border="true"
+        app:civ_border_color="@color/black"
+        android:layout_gravity="center"
+        android:src="@mipmap/ajpg5"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Punyawork"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/blue"
+        android:textSize="30sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FROM"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="90dp"
+        android:textColor="@color/blue"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bysc"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="60dp"
+        android:textColor="@color/blue"
+        android:textSize="15sp"/>
+
+</FrameLayout>

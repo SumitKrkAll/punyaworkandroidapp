@@ -2,47 +2,6 @@
     <string name="app_name">Punyawork</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="lorem_ipsum">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
-        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
-        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
-        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
-        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
-        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
-        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
-        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
-        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
-        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
-        bibendum, vel congue leo egestas.\n\n
-        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
-        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
-        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
-        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
-        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
-        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
-        est.\n\n
-        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
-        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
-        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
-        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
-        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
-        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
-        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
-        convallis.\n\n
-        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
-        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
-        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
-        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
-        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
-        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
-    </string>
     <string name="title">Create Order</string>
     <string name="share">Share</string>
     <string name="top">Top Fragment</string>
@@ -71,6 +30,7 @@
         <item>Vegitables</item>
     </string-array>
     <string name="home_tab">HOME</string>
+    <string name="bed_tab">BED</string>
     <string name="plasticbottles_tab">BOTTLE</string>
     <string name="steelbottles_tab">STEEL</string>
     <string name="medicine_tab">HERB</string>
@@ -100,7 +60,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text2">Feedback</string>
-    <string name="username">punyawork1@gmail.com</string>
+    <string name="username">sumitkumar5may1998@gmail.com</string>
     <string name="nav_inbox">Message</string>
     <string name="nav_drafts">Drafz</string>
     <string name="nav_sent">Sent Message</string>
@@ -155,8 +115,12 @@
     <string name="paymentmode">Select Payment Mode</string>
     <string name="paytm">Paytm</string>
     <string name="google">Google Pay</string>
+    <string name="google_maps_key">123</string>
     <string name="phone">Phone Pay</string>
     <string name="bhim">Bhim</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="lorem_ipsum">Welcome Lorem Ipsum dummy</string>
     <string name="cash">Cash</string>
     <string name="orderid">Order Id:</string>
     <string name="mode">Mode of Payment:</string>
@@ -172,8 +136,8 @@
     <string name="bustop">Bus Stop No.:</string>
     <string name="busd">Enter Bus Number</string>
     <string name="busstopd">Enter Bus Stop Number</string>
-    <string name="name">Name:</string>
-    <string name="email">Email:</string>
+    <string name="name">Name :</string>
+    <string name="email">Email :</string>
     <string name="ename">Enter Name...</string>
     <string name="eemail">Enter Email...</string>
     <string name="subject">Subject:</string>
@@ -188,4 +152,61 @@
     <string name="sbottle">Steel Bottle</string>
     <string name="web">Our Website</string>
     <string name="title_activity_map">Map</string>
+    <string name="trace">Your order is on the way.</string>
+    <string name="trace2">Click to trace Water Salesman.</string>
+    <string name="channel_name2">abcd</string>
+    <string name="channel_name3">abcde</string>
+    <string name="channel_name4">signup</string>
+    <string name="location">Your Location</string>
+    <string name="title_activity_your_location">Map</string>
+    <string name="title_activity_your_location1">Map</string>
+    <string name="locsearch">Type Place...</string>
+    <string name="search">SEARCH</string>
+    <string name="stopwatch">Stop Watch</string>
+    <string name="service">Our Services</string>
+    <string name="waterservice">Water Service</string>
+    <string name="plasticbottleservice">Plastic Bottle</string>
+    <string name="steelbottleservice">Steel Bottle</string>
+    <string name="medicineservice">Medicine Service</string>
+    <string name="bedservice">Bed Service</string>
+    <string name="platform">Passengers at Platform</string>
+    <string name="pname">Name</string>
+    <string name="epname">Enter Name</string>
+    <string name="pno">Platform No.</string>
+    <string name="epno">Enter Platform Number</string>
+    <string name="adn">ADN No.</string>
+    <string name="eadn">Enter Aquaeasy Dustbin Number</string>
+    <string name="mobileno">Mobile No.</string>
+    <string name="emobileno">Enter Mobile Number</string>
+    <string name="bysc"> Punyawork welcomes you</string>
+    <string name="editdetails">Edit Details</string>
+    <string name="fullname">Full Name :</string>
+    <string name="fullnamed">Enter Full Name...</string>
+    <string name="phoneno">Phone Number :</string>
+    <string name="phonenod">Enter Phone Number ...</string>
+    <string name="address">Address (optional) :</string>
+    <string name="addressd">Enter Address ...</string>
+    <string name="password">Password :</string>
+    <string name="enterpassword">Enter Password...</string>
+    <string name="signup">Sign Up</string>
+    <string name="answer12">You will Receive It after 10PM Today on your Respective Place</string>
+    <string name="channel_name_Firebase">Myfirebase</string>
+    <string name="msg_subscribed">Message Subscribed</string>
+    <string name="msg_subscribe_failed">Message Subscription Failed</string>
+    <string name="Orderhis">Order History</string>
+    <string name="histdet">Order History Detail</string>
+    <string name="orderdate">Order Date:</string>
+    <string name="ordertime">Order Time:</string>
+    <string name="sendtext">Send SMS</string>
+    <string name="sendsms">Send SMS</string>
+    <string name="typemessage">Type Message...</string>
+    <string name="enternum">Enter User Mobile Number...</string>
+    <string name="sendtextmess">Send Text Message</string>
+    <string name="logintoaquaeasy">Login to Aquaeasy</string>
+    <string name="createnewaccount">Create New Account</string>
+    <string name="login">Login</string>
+    <string name="logout">Log Out</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="first_fragment_label">First fragement</string>
+    <string name="second_fragment_label">Second fragement</string>
 </resources>
