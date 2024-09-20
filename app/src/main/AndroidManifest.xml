@@ -33,7 +33,7 @@
         android:icon="@mipmap/ajpg5"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ajpg5"
-        android:theme="@style/Theme.Punyawork"
+        android:theme="@style/Base.Theme.Punyawork"
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity android:name=".PrivacyActivity"/>

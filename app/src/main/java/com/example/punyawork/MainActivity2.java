@@ -127,7 +127,10 @@ public class MainActivity2 extends AppCompatActivity implements
                             // Get the token from the task result
                             String token = task.getResult();
                             // Save the token or use it as needed
-                            saveToken(token);
+                            if(token!=null){
+                                saveToken(token);
+                            }
+
                         } else {
                             // Handle the error if the task was not successful
                             Log.e("FirebaseToken", "Failed to get token", task.getException());
@@ -365,9 +368,8 @@ public class MainActivity2 extends AppCompatActivity implements
 
     public boolean onCreateOptionsMenu (Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        MenuItem menuItem = menu.findItem(R.id.add2);
-        shareActionProvider =(ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
-        setShareActionIntent("want to join for cold drink");
+
+
         return super.onCreateOptionsMenu(menu);
     }
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -380,6 +382,9 @@ public class MainActivity2 extends AppCompatActivity implements
             Intent intent1 =  new Intent(this, StopWatechActivity.class);
             startActivity(intent1);
             return true;
+        }else if(item.getItemId()==R.id.add2){
+            setShareActionIntent("want to join for cold drink");
+            return true;
         }else{
             return super.onOptionsItemSelected(item);
         }
@@ -387,17 +392,14 @@ public class MainActivity2 extends AppCompatActivity implements
     }
 
     private void setShareActionIntent (String text) {
+        Log.v("tag","Welcome Sumit to Share Action");
         Intent intent= new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, text);
-        if(shareActionProvider!=null){
-            shareActionProvider.setShareIntent(intent);
-        }
+        Intent chooser=Intent.createChooser(intent,"Share via");
+        startActivity(chooser);
 
     }
-
-
-
 
     public boolean  onNavigationItemSelected(MenuItem item){
         int id=item.getItemId();
@@ -549,7 +551,6 @@ public class MainActivity2 extends AppCompatActivity implements
 
     }
 
-
     public void setProgressBar(){
         progressBar = new ProgressDialog(this);
         progressBar.setCancelable(true);
@@ -590,20 +591,23 @@ public class MainActivity2 extends AppCompatActivity implements
             }
         }).start();
     }
-
 // this method is used to save the token in the firebase database
     public void saveToken( String Token){
-        usermail=myauth.getCurrentUser().getEmail();
-        UsersDetail usersDetail=new UsersDetail(usermail,Token);
 
-        DatabaseReference mydatabase= FirebaseDatabase.getInstance().getReference("USERS");
-        mydatabase.child(myauth.getCurrentUser().getUid())
-                .setValue(usersDetail)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                    }
-                });
+        if(myauth!=null){
+            usermail=myauth.getCurrentUser().getEmail();
+            UsersDetail usersDetail=new UsersDetail(usermail,Token);
+
+            DatabaseReference mydatabase= FirebaseDatabase.getInstance().getReference("USERS");
+            mydatabase.child(myauth.getCurrentUser().getUid())
+                    .setValue(usersDetail)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                        }
+                    });
+        }
+
 
     }
 }
