@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context="aquaeasy.co.bitsandpizza.PastaDetailActivity">
+    tools:context="com.example.punyawork.PastaDetailActivity">
     <include
         android:id="@+id/toolbarp"
         layout="@layout/toolbar_main"

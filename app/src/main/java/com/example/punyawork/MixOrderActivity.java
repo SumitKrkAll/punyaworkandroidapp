@@ -25,6 +25,7 @@ public class MixOrderActivity extends AppCompatActivity {
     public int id;
     public static final String BUS_MIX="BUSMIX";
     public static final String TRAIN_MIX="TRAINMIX";
+    public static final String PLATFORM_MIX="PLATFORMMIX";
     public int BUSMIX;
     public int TRAINMIX;
     public Intent intent31;

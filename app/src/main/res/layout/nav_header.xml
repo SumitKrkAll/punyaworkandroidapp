@@ -2,30 +2,61 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="180dp">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/sumit1"
-        android:scaleType="centerCrop"/>
-    <LinearLayout
+    android:layout_height="230dp"
+    android:background="@color/slategray">
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:id="@+id/myimageview"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"/>
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom|start"
-        android:layout_margin="16dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textColor="@color/colorPrimary"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/username"
-            android:textColor="@color/colorPrimary"/>
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="8dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:id="@+id/name"
+        android:clickable="true"
+        android:text="Sumit Kumar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="20dp"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/white"
+        android:id="@+id/email"
+        android:clickable="true"
+        android:text="sumitkumar5may1998@gmail.com"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:textSize="8sp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:text="Edit Details"
+        android:clickable="false"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab"
+        android:layout_gravity="end"
+        android:src="@drawable/camera"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        app:fabSize="mini"
+        android:backgroundTint="@color/slategray"
+        />
 
 </FrameLayout>

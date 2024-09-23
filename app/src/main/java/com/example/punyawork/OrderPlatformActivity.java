@@ -1,0 +1,201 @@
+package com.example.punyawork;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+import android.database.sqlite.SQLiteOpenHelper;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import androidx.appcompat.widget.Toolbar;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.view.View;
+import android.widget.Toast;
+
+public class OrderPlatformActivity extends AppCompatActivity {
+    EditText pname,pno,adnno,mobileno;
+    Button Continue;
+    public String category;
+    public ContentValues contentValues= new ContentValues();
+    public static final String WATER_ID="waterId";
+    public static final String PIZZA_ID="pizzaID";
+    public static final String PASTA_ID="pastaId";
+    public static final String MEDICINE_ID="medicineID";
+
+    public static final String BED_ID="bedId";
+    public int PLATFORMWATER=3;
+    public int PLATFORMMIX=3;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_order_platform);
+
+        // set the toolbar as activity appbar
+        Toolbar toolbar12 = (Toolbar) findViewById(R.id.toolbarp);
+        setSupportActionBar(toolbar12);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        // get the all edit view feiled value
+        pname=(EditText) findViewById(R.id.editText2);
+        pno=(EditText) findViewById(R.id.editText3);
+        adnno=(EditText) findViewById(R.id.editText4);
+        mobileno=(EditText)findViewById(R.id.editText5);
+        Continue=(Button) findViewById(R.id.button3);
+        Intent intent1= getIntent();
+        // to show the detail of the selected water icon
+        if(intent1.hasExtra(WATER_ID)) {
+            int waterId=intent1.getIntExtra(WATER_ID,0);
+            int waterimage=Water.waters[waterId].getImageResourceId();
+            String watername=Water.waters[waterId].getName();
+            String waterrate=Water.waters[waterId].getVrate();
+            ImageView image= (ImageView) findViewById(R.id.imageView5);
+            image.setImageDrawable(ContextCompat.getDrawable(this,waterimage));
+            image.setContentDescription(watername);
+            TextView text=(TextView) findViewById(R.id.textView);
+            text.setText(watername);
+            contentValues.put("Product_Name",watername);
+            contentValues.put("Category","Water");
+            contentValues.put("Rate",waterrate);}
+
+        // to show the detail of the selected plastic water bottle icon
+        if(intent1.hasExtra(PIZZA_ID)){
+            int pizzaId=intent1.getIntExtra(PIZZA_ID,0);
+            int pizzaimage=Pizza.pizzas[pizzaId].getImageResourceId();
+            String pizzaname=Pizza.pizzas[pizzaId].getName();
+            String pizzarate=Pizza.pizzas[pizzaId].getVprice();
+            ImageView image= (ImageView) findViewById(R.id.imageView5);
+            image.setImageDrawable(ContextCompat.getDrawable(this,pizzaimage));
+            image.setContentDescription(pizzaname);
+            TextView text=(TextView) findViewById(R.id.textView);
+            text.setText(pizzaname);
+            contentValues.put("Product_Name",pizzaname);
+            contentValues.put("Category","Plastic Bottle");
+            contentValues.put("Rate",pizzarate);
+
+        }
+
+        // to show the detail of the selected steel water bottle icon
+        if(intent1.hasExtra(PASTA_ID)){
+            int pastaId=intent1.getIntExtra(PASTA_ID,0);
+            int pastaimage=Pasta.pastas[pastaId].getImageResourceId();
+            String pastaname=Pasta.pastas[pastaId].getName();
+            String pastarate=Pasta.pastas[pastaId].getVprice();
+            ImageView image= (ImageView) findViewById(R.id.imageView5);
+            image.setImageDrawable(ContextCompat.getDrawable(this,pastaimage));
+            image.setContentDescription(pastaname);
+            TextView text=(TextView) findViewById(R.id.textView);
+            text.setText(pastaname);
+            contentValues.put("Product_Name",pastaname);
+            contentValues.put("Category","Steel Bottle");
+            contentValues.put("Rate",pastarate);
+
+        }
+        // to show the detail of the selected medicine icon
+        if(intent1.hasExtra(MEDICINE_ID)){
+            int medicineId=intent1.getIntExtra(MEDICINE_ID,0);
+            int medicineimage=Medicine.medicines[medicineId].getImageResourceId();
+            String medicinename=Medicine.medicines[medicineId].getName();
+            String medicinerate=Medicine.medicines[medicineId].getVprice();
+            ImageView image= (ImageView) findViewById(R.id.imageView5);
+            image.setImageDrawable(ContextCompat.getDrawable(this,medicineimage));
+            image.setContentDescription(medicinename);
+            TextView text=(TextView) findViewById(R.id.textView);
+            text.setText(medicinename);
+            contentValues.put("Product_Name",medicinename);
+            contentValues.put("Category","Medicine");
+            contentValues.put("Rate",medicinerate);
+        }
+
+        if(intent1.hasExtra(BED_ID)) {
+            int bedId=intent1.getIntExtra(BED_ID,0);
+            int bedimage=Bed.beds[bedId].getImageResourceId();
+            String bedname=Bed.beds[bedId].getName();
+            String bedrate=Bed.beds[bedId].getVservicecharge();
+            ImageView image= (ImageView) findViewById(R.id.imageView5);
+            image.setImageDrawable(ContextCompat.getDrawable(this,bedimage));
+            image.setContentDescription(bedname);
+            TextView text=(TextView) findViewById(R.id.textView);
+            text.setText(bedname);
+            contentValues.put("Product_Name",bedname);
+            contentValues.put("Category","Bed");
+            contentValues.put("Rate",bedrate);}
+    }
+    // put the condition on the Editview field
+
+    public void mycontinue(View view){
+        if(pname.length()==0){
+            pname.setError("Enter Name");
+        }
+        else if(pno.length()==0){
+            pno.setError("Enter Platform Number");
+        }
+        else if(adnno.length()==0){
+            adnno.setError("Enter Aquaeasy Dustbin Number");
+        }
+        else if(mobileno.length()==0){
+            mobileno.setError("Enter Mobile Number");
+        }
+        else {
+            pname=(EditText) findViewById(R.id.editText2);
+            pno=(EditText) findViewById(R.id.editText3);
+            adnno=(EditText) findViewById(R.id.editText4);
+            mobileno=(EditText)findViewById(R.id.editText5);
+            String pname1 = pname.getText().toString();
+            int  pno1 =Integer.parseInt(pno.getText().toString());
+            String adn1=adnno.getText().toString();
+            String mobno=mobileno.getText().toString();
+            contentValues.put("Passenger_Name",pname1);
+            contentValues.put("PLATFORM_No",pno1);
+            contentValues.put("ADN_No",adn1);
+            contentValues.put("Mobile_No",mobno);
+            SQLiteOpenHelper aquaeasyDatabasehelper=new AquaeasyDatabaseHelper(this);
+            try{
+                SQLiteDatabase db = aquaeasyDatabasehelper.getWritableDatabase();
+                long result= db.insert("PlatformWaterOrder",null,contentValues);
+                Cursor cursor= db.query("PlatformWaterOrder",new String[]{"Id","Category"},null,
+                        null,null,null,null);
+                if(cursor.moveToLast()){
+                    category=cursor.getString(1);
+                }
+                if(result==-1){
+                    Toast toast2= Toast.makeText(this,
+                            "Data  is not inserted into the PlatformWaterOrder", Toast.LENGTH_SHORT);
+                    toast2.show();
+                }else {
+                    Toast toast3= Toast.makeText(this,
+                            "Data  is  inserted into the PlatformWaterOrder", Toast.LENGTH_SHORT);
+                    toast3.show();}
+                cursor.close();
+                db.close();
+            } catch (SQLiteException e){
+                Toast toast1= Toast.makeText(this,
+                        "Database is Unavailable", Toast.LENGTH_SHORT);
+                toast1.show();
+            }
+            Toast toast= Toast.makeText(this,
+                    "Record is Loaded Successful", Toast.LENGTH_SHORT);
+            toast.show();
+            if(category.equals("Water")){
+                Intent intent1=new Intent(this,WaterOrderActivity.class);
+                intent1.putExtra(WaterOrderActivity.PLATFORM_WATER,PLATFORMWATER);
+                startActivity(intent1);
+            } else {
+                Intent intent=new Intent(this,MixOrderActivity.class);
+                intent.putExtra(MixOrderActivity.PLATFORM_MIX,PLATFORMMIX);
+                startActivity(intent);
+            }
+        }
+    }
+
+}
+

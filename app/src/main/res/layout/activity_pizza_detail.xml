@@ -20,7 +20,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="aquaeasy.co.bitsandpizza.PizzaDetailActivity"
+    tools:context="com.example.punyawork.PizzaDetailActivity"
     android:background="@color/teal">
 
     <ImageView

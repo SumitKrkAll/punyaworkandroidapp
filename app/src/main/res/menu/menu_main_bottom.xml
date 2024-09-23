@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add1"
+        android:icon="@drawable/home"
+        android:title="HOME"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/add2"
+        android:icon="@drawable/service"
+        android:title="SERVICE"
+        android:orderInCategory="2"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/add3"
+        android:title="BOOKS"
+        android:icon="@drawable/book"
+        android:orderInCategory="3"
+        app:showAsAction="ifRoom" />
+
+</menu>

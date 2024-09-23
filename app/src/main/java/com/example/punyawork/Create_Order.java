@@ -14,6 +14,7 @@ public class Create_Order extends AppCompatActivity {
     public static final String MEDICINEID="medicineId";
     public static final String PASTAID="pastaId";
     public static final String PIZZAID="pizzaId";
+    public static final String BEDID="pizzaId";
     public Intent intent1;
 
 
